@@ -1,0 +1,38 @@
+{
+    "name": "toolman/docker",
+    "description": "这是一款使用 PHP 7.3 和 nginx *.* 搭建的 Linux Docker",
+    "version": "v1.0.0-dev",
+    "type": "library",
+    "keywords": [
+        "docker",
+        "php",
+        "nginx"
+    ],
+    "homepage": "https://github.com/zhubaiming/docker_php_nginx",
+    "time": "2020-08-21",
+    "license": [
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "toolman",
+            "email": "zbm4333@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Toolman\\Docker\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Toolman\\Docker\\DockerServiceProvider"
+            ],
+            "aliases": {
+                "Admin": "Toolman\\Docker\\Facades\\Docker"
+            }
+        }
+    }
+}
